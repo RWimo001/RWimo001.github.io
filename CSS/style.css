@@ -1,0 +1,169 @@
+/* Réinitialisation des marges et des rembourrages */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style de l'arrière-plan du corps */
+body {
+    font-family: "Arial", sans-serif;
+    background: linear-gradient(135deg, #fff, #d9e4f0, #1e3c72);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Empêche la barre de défilement horizontale */
+    font-size: 16px; /* Reduce the base font size */
+}
+
+/* Style de l'en-tête */
+header {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0; /* Reduce top and bottom padding */
+}
+
+/* Style de la grille du contenu principal */
+main {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 20px; /* Reduce the gap between grid items */
+    margin: 10px; /* Reduce the margin around the main content */
+    max-width: 100%; /* Ajuste la largeur au maximum de la fenêtre */
+}
+
+/* Style de la section du profil */
+.profile {
+    text-align: center;
+}
+
+#profile-image {
+    border-radius: 50%;
+    max-width: 150px; /* Reduce the image size */
+    max-height: 150px; /* Reduce the image size */
+    border: 4px solid #fff; /* Reduce the border size */
+}
+
+/* Style du titre du CV */
+h1 {
+    font-size: 28px; /* Reduce the font size */
+    font-weight: bold;
+    color: #1e3c72;
+    margin: 10px 0; /* Reduce top and bottom margin */
+}
+
+/* Style de la description personnelle */
+p {
+    font-size: 14px; /* Reduce the font size */
+    color: #333;
+    margin: 5px 0; /* Reduce top and bottom margin */
+    text-align: center;
+}
+
+/* Style des sections du CV */
+section {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 20px; /* Reduce section padding */
+    margin-bottom: 10px; /* Reduce the margin between sections */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 24px; /* Reduce the font size */
+    color: #1e3c72;
+    margin: 10px 0; /* Reduce top and bottom margin */
+}
+
+/* Style des listes non ordonnées */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style des éléments de liste (li) */
+li {
+    font-size: 14px; /* Reduce the font size */
+    color: #333;
+    margin: 5px 0; /* Reduce top and bottom margin */
+    position: relative;
+    padding-left: 30px;
+}
+
+/* Style du tiret pour les éléments de liste (li) */
+li::before {
+    content: "\2014"; /* Utilise un tiret (–) au lieu d'un carré */
+    position: absolute;
+    left: 0;
+    font-size: 18px; /* Reduce the font size */
+    color: #1e3c72;
+}
+
+/* Style spécial pour les éléments de liste avec dates */
+li > p::before {
+    content: ""; /* Pour les éléments de liste avec des dates, n'affiche rien (supprime les carrés) */
+}
+
+/* Style des sous-listes avec des carrés remplis */
+ul ul li::before {
+    content: "\25A0"; /* Utilise un carré rempli pour les sous-listes */
+    font-size: 14px; /* Reduce the font size */
+}
+
+/* Style du bouton "Contactez-moi" et "Télécharger PDF" */
+button#afficher-contact, button#telecharger-pdf {
+    display: block;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    padding: 15px 30px; /* Reduce button padding */
+    border: none;
+    cursor: pointer;
+    font-size: 18px; /* Reduce button font size */
+    border-radius: 15px;
+    transition: background 0.3s;
+    margin: 20px auto; /* Reduce button margin */
+}
+
+button#afficher-contact:hover, button#telecharger-pdf:hover {
+    background: linear-gradient(135deg, #2a5298, #1e3c72);
+}
+
+/* Style du pied de page */
+footer {
+    text-align: center;
+    padding: 20px 0; /* Reduce top and bottom padding */
+    background: #1e3c72;
+    color: #fff;
+    font-size: 16px; /* Reduce font size */
+}
+@media print {
+    /* Réduire la taille de police pour le PDF */
+    body, .pdf-content {
+        font-size: 10px;
+    }
+
+    /* Ajuster l'espacement des lignes pour le PDF */
+    .pdf-content {
+        line-height: 1.2;
+    }
+
+    /* Informations de contact pour le PDF */
+    .pdf-contact-info{
+        margin-top: 20px;
+        font-size: 8px;
+    }
+
+    /* Réduire la taille de police pour le pied de page dans le PDF */
+    .pdf-footer {
+        font-size: 8px;
+        margin-top: 20px;
+    }
+}
+
+
+
+
+
